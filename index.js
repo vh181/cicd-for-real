@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('PetPay - Versão 2.0 no ar!');
+  res.end('PetPay - Versão 3.0 no ar!');
 });
 
 server.listen(port, () => {
