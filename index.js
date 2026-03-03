@@ -1,8 +1,13 @@
-console.log("Sistema PetPay iniciado com sucesso!");
-console.log("Ambiente de CI/CD configurado.");
+const http = require('http');
 
-function soma(a, b) {
-    return a + b;
-}
+const port = process.env.PORT || 3000;
 
-console.log("Teste de soma (2+3):", soma(2, 3));
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('PetPay - Sistema Online via CD!');
+});
+
+server.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
+});
